@@ -1,7 +1,7 @@
 // ========== TYPING ANIMATION ==========
 const typedSpan = document.querySelector('.typed-text');
 if (typedSpan) {
-  const words = ['a developer', 'a cybersecurity analyst', 'an iOS engineer', 'a ministry leader', 'an athlete'];
+  const words = ['a developer 👨‍💻', 'a cybersecurity analyst 🔒', 'an iOS engineer 📱', 'a ministry leader 🙏', 'an athlete ⚾🏀'];
   let wordIndex = 0;
   let charIndex = 0;
   let isDeleting = false;
@@ -46,10 +46,10 @@ function startCounters() {
     const updateCount = () => {
       if (current < target) {
         current = Math.min(current + increment, target);
-        counter.innerText = isFloat ? current.toFixed(1) : Math.floor(current);
+        counter.innerText = isFloat ? current.toFixed(2) : Math.floor(current);
         setTimeout(updateCount, 25);
       } else {
-        counter.innerText = isFloat ? target.toFixed(1) : target;
+        counter.innerText = isFloat ? target.toFixed(2) : target;
       }
     };
     updateCount();
@@ -78,7 +78,7 @@ if (cursorDiv && window.innerWidth > 768) {
     cursorDiv.style.opacity = '0';
   });
   document.addEventListener('mouseenter', () => {
-    cursorDiv.style.opacity = '0.6';
+    cursorDiv.style.opacity = '0.5';
   });
 }
 
